@@ -9,16 +9,16 @@ class App < Sinatra::Base
         erb :'./views/index'
     end
 
-    get '/team' do
-        @team = Team.all
+    get '/teams' do
+        @teams = Team.all
         
         erb :'views/team'
     end
 
-    post '/team' do
+    post '/teams' do
         binding.pry
         @team = Team.new(params[:team])
-        
+
 
         erb :'views/team'
     end
