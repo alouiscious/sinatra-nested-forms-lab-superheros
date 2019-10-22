@@ -12,14 +12,14 @@ class App < Sinatra::Base
     get '/' do
         # @teams = Team.all
         
-        erb :'index'
+        erb :'super_hero'
     end
 
-    post '/teams' do
-        binding.pry
+    post '/team' do
+        # binding.pry
         @team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
-        members = params
-        @super_heros = 
+        # members = params
+        # @super_heros = (name: params[:team][:member][][:name], power: params[:team][:motto])
         
         erb :'team'
     end
