@@ -1,8 +1,8 @@
 <h1>Create a Team and Heroes!</h1>
-<form method="POST" action="/team">
+<form method="POST" action="/teams">
   <h2>Enter these team details.</h2>
   <label for="team_name">Name: </label>
-  <input type="text" name="team[name]">
+  <input type="text" name="team[name]"><br>
   <label for="team_motto">Motto: </label>
   <input type="text" name="team[motto]">
 
@@ -10,27 +10,27 @@
   <h3>Enter the Superheros on your team.</h2>
   <h2>Hero 01</h2>
   <label for="member1_name">Name: </label>
-  <input type="text" id="member1_name" name="team[members][][name]">
+  <input type="text" id="member1_name" name="team[members][][name]"><br>
   <label for="member1_power">Power: </label>
-  <input type="text" name="member1_power" name="team[members][][power]">
+  <input type="text" id="member1_power" name="team[members][][power]"><br>
   <label for="member1_bio">Biography: </label>
-  <input type="text" name="member1_bio" name="team[members][][bio]">
+  <input type="text" id="member1_bio" name="team[members][][bio]">
   
    <h2>Hero 02</h2>
   <label for="member2_name">Name: </label>
-  <input type="text" id="member2_name" name="team[members][][name]">
+  <input type="text" id="member2_name" name="team[members][][name]"><br>
   <label for="member2_power">Power: </label>
-  <input type="text" name="member2_power" name="team[members][][power]">
+  <input type="text" id="member2_power" name="team[members][][power]"><br>
   <label for="member2_bio">Biography: </label>
-  <input type="text" name="member2_bio" name="team[members][][bio]">
+  <input type="text" id="member2_bio" name="team[members][][bio]">
 
    <h2>Hero 03</h2>
   <label for="member3_name">Name: </label>
-  <input type="text" id="member3_name" name="team[members][][name]">
+  <input type="text" id="member3_name" name="team[members][][name]"><br>
   <label for="member3_power">Power: </label>
-  <input type="text" name="member3_power" name="team[members][][power]">
+  <input type="text" id="member3_power" name="team[members][][power]"><br>
   <label for="member3_bio">Biography: </label>
-  <input type="text" name="member3_bio" name="team[members][][bio]">
+  <input type="text" id="member3_bio" name="team[members][][bio]"><br>
   
   <button type="submit" value="submit" id="Submit">Submit</button>
 </form>

@@ -1,4 +1,5 @@
-class Teams
+class Team
+
   attr_reader :name, :motto
 
   @@teams = []
@@ -9,8 +10,8 @@ class Teams
     @@teams << self
   end
 
-  # def self.all
-  #   @@team
-  # end
+  def self.all
+    @@teams
+  end
 
 end

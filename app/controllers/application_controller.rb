@@ -11,17 +11,26 @@ class App < Sinatra::Base
 
     get '/' do
         # @teams = Team.all
-        
         erb :'super_hero'
     end
 
-    post '/team' do
-        # binding.pry
-        @team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
-        # members = params
-        # @super_heros = (name: params[:team][:member][][:name], power: params[:team][:motto])
+    post '/teams' do
+        # @team = Team.new(params[:team])
+        # params[:team][:members].each do |details|
+        #     SuperHero.new(details)
+        # end
+        # @super_heroes = SuperHero.all
+
         
-        erb :'team'
+        @team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
+        members = params[:team][:members]
+
+        @super_heroes = members.map do |member_params|
+            SuperHero.new({name: member_params[:name], power: member_params[:power], bio: member_params[:bio]})
+        end
+# binding.pry
+        erb :'teams'
+
     end
 
     
